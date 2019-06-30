@@ -6,10 +6,9 @@ class Users extends CI_Controller{
 
 		$this->load->model('user_model');
 
-		$result = $this->user_model->get_users();
+		$data['results'] = $this->user_model->get_users();
 
-		foreach ($result as $item) {
-			echo $item->username . "<br>";
-		}
+		$this->load->view('user_view', $data);
+
 	}
 }
