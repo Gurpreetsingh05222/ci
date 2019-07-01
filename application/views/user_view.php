@@ -7,9 +7,7 @@
 <body>
 	<h1>
 		<?php
-			foreach ($results as $value) {
-				echo $value->username. "<br>";
-			}
+			echo $results;
 		?>
 	</h1>
 </body>
