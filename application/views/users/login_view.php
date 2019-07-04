@@ -2,7 +2,15 @@
 
 <?php $attributes = array( 'id' => 'login_form', 'class' => 'form_horizontal' ); ?>
 
-<?php echo form_open('users/login_view', '', $attributes);?>
+<?php if($this->session->flashdata('errors')) :
+
+	echo $this->session->flashdata('errors');
+
+?>
+
+<?php endif; ?>
+
+<?php echo form_open('users/login', '', $attributes);?>
 
 <div class="form-group">
 

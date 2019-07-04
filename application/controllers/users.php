@@ -2,13 +2,23 @@
 
 class Users extends CI_Controller{
 
-	public function show(){
+	public function login(){
 
-		$this->load->model('user_model');
+		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[3]|max_length[12]');
 
-		$data['results'] = $this->user_model->get_users();
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]|max_length[15]');
 
-		$this->load->view('user_view', $data);
+		if($this->form_validation->run() == FALSE){
 
+			$data = array(
+				'errors' => validation_errors()
+			);
+
+			$this->session->set_flashdata($data);
+
+			redirect('home');
+		}
+
+		// $this->input->post('username');
 	}
 }
