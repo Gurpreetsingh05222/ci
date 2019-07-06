@@ -46,6 +46,22 @@
 
 <div class="form-group">
 
+	<?php echo form_label('Confirm Password');
+
+		$data = array(
+			'class' => 'form-control',
+			'name' => 'confirm_password',
+			'placeholder' => 'Confirm Password'
+		);
+
+		echo form_password($data); 
+
+	?>
+
+</div>
+
+<div class="form-group">
+
 	<?php
 		
 		$data = array(
