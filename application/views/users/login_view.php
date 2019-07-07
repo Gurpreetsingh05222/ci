@@ -1,3 +1,31 @@
+<?php if($this->session->userdata('logged_in')): ?>
+
+<h2>Logout</h2>
+
+<?php echo form_open('users/logout'); ?>
+
+<p>
+	<?php if($this->session->userdata('username')): ?>
+
+		<?php echo "You are logged in as ". $this->session->userdata('username'); ?>
+
+	<?php endif; ?>
+</p>
+
+<?php 
+	$data = array(
+		'class' => 'btn btn-primary',
+		'name' => 'submit',
+		'value' => 'Logout'
+	);
+
+	echo form_submit($data);
+?>
+
+<?php echo form_close(); ?>
+
+<?php else: ?>
+
 <h2>Login Form</h2>
 
 <?php $attributes = array( 'id' => 'login_form', 'class' => 'form_horizontal' ); ?>
@@ -76,6 +104,6 @@
 
 </div>
 
-
-
 <?php echo form_close();?>
+
+<?php endif;?>
