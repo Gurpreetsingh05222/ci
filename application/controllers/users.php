@@ -2,6 +2,12 @@
 
 class Users extends CI_Controller{
 
+	public function register(){
+		
+		$data['main_view'] = 'users/register_view';
+		$this->load->view('layouts/main', $data);
+	}
+
 	public function login(){
 
 		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[3]');
@@ -42,8 +48,6 @@ class Users extends CI_Controller{
 
 				$data['main_view'] = "admin_view";
 				$this->load->view('layouts/main', $data);
-
-				// redirect('home/index');
 
 			}else{
 
