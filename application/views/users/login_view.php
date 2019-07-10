@@ -2,7 +2,7 @@
 
 <h2>Logout</h2>
 
-<?php echo form_open('users/logout'); ?>
+<?php echo form_open('Users/logout'); ?>
 
 <p>
 	<?php if($this->session->userdata('username')): ?>
@@ -26,7 +26,7 @@
 
 <?php else: ?>
 
-<h2>Login Form</h2>
+<h2>Login Form</h2> 
 
 <?php $attributes = array( 'id' => 'login_form', 'class' => 'form_horizontal' ); ?>
 
@@ -38,7 +38,7 @@
 
 <?php endif; ?>
 
-<?php echo form_open('users/login', '', $attributes);?>
+<?php echo form_open('Users/login', '', $attributes);?>
 
 <div class="form-group">
 
