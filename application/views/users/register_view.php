@@ -116,7 +116,7 @@
 		$data = array(
 			'class' => 'btn btn-primary',
 			'name' => 'submit',
-			'value' => 'Login'
+			'value' => 'Register'
 		);
 
 		echo form_submit($data); 
