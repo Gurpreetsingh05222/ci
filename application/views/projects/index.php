@@ -1,2 +1,1 @@
-<?php 
-echo "This is projects view";
+<h1 class="text-center">Projects</h1>
