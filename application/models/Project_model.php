@@ -5,7 +5,9 @@ class Projects_model extends CI_Model{
 
         $query = $this->db->get('projects');
 
-        return $query->result();
+        return $query->result(); 
+
+        
 
     }
 
