@@ -24,6 +24,15 @@
 					<a class="nav-link" href="<?php echo base_url();?>/Users/register">Register</a>
 				</li>
 			</ul>
+
+			<?php if($this->session->userdata('logged_in')): ?>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="<?php echo base_url();?>users/logout">Logout</a></li>
+				</ul>
+
+			<?php endif; ?>
+
 		</div>
 	</nav>
 
