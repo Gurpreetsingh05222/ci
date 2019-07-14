@@ -24,7 +24,9 @@ class Projects extends CI_Controller{
     
     }
 
-    public function display(){
+    public function display($project_id){
+
+        $data['project_id'] = $this->Project_model->get_project($project_id);
 
         $data['main_view'] = "projects/display";
         $this->load->view("layouts/main", $data);
