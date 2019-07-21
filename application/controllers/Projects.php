@@ -49,6 +49,11 @@ class Projects extends CI_Controller{
                 'project_name' => $this->input->post('project_name'),
                 'project_body' => $this->input->post('project_body')
             );
+
+            if($this->project_model->create_project($data)){
+                $this->session->set_flashdata('project_created', 'Project has been created');
+                redirect('projects/index');
+            }
         }
 
 
