@@ -5,6 +5,8 @@ class Projects extends CI_Controller{
         
         parent::__construct();
 
+        $this->load->model('project_model');
+
         if(!$this->session->userdata('logged_in')){
     
             $this->session->set_flashdata('no_access', 'You are not logged in');

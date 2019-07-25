@@ -4,7 +4,7 @@
 
 <?php echo validation_errors("<p class='bg-danger'></p>"); ?>
 
-<?php echo form_open('users/register', $attributes);?>
+<?php echo form_open('projects/create', $attributes);?>
 
 <div class="form-group">
 
@@ -45,7 +45,7 @@
 		$data = array(
 			'class' => 'btn btn-primary',
 			'name' => 'submit',
-			'value' => 'Submit'
+			'value' => 'Create'
 		);
 
 		echo form_submit($data); 

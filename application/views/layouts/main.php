@@ -23,6 +23,9 @@
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url();?>/Users/register">Register</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url();?>/Projects/">Projects</a>
+				</li>
 			</ul>
 
 			<?php if($this->session->userdata('logged_in')): ?>
